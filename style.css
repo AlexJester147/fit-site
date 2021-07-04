@@ -6,6 +6,7 @@ body {
   font-family: 'FuturaLightC', Arial, sans-serif;
   color: white;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* overflow-x: hidden; */
 }
 
 @font-face {
@@ -35,6 +36,27 @@ a:hover {
   transition: all .5s ease-in-out;
 }
 
+h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.55;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding-bottom: 50px;
+  word-break: break-word;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 18px;
+  word-break: break-word;
+}
+
+h3 {
+  font-weight: 100;
+  word-break: break-word;
+}
+
 ul {
   display: flex;
   flex-direction: row;
@@ -45,11 +67,23 @@ ul {
 }
 
 nav ul li {
-  padding: 0px 80px 0px 0px;
+  padding: 0px 60px 0px 0px;
+}
+
+#menu{
+  width: fit-content;
+  background: black;
+  padding: 48px 40px 38px;
+  position: relative;
+  height: 100%;
+}
+
+header nav img{
+  display: none;
 }
 
 header nav {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.55;
   font-weight: 300;
   color: white;
@@ -65,10 +99,12 @@ header nav {
   flex-wrap: wrap;
 }
 
+
+
 .logo {
   font-weight: 700;
   padding-left: -20px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.55;
   color: white;
   text-transform: uppercase;
@@ -76,20 +112,21 @@ header nav {
 
 #header_background {
   background-image: url(/image/photo1.jpg);
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0;
   position: absolute;
   top: 0px;
-  left: 0px;
-  width: 100%;
+  left: calc(50% - 600px + -120px);
+  width: 680px;
   height: 880px;
+  transition: all .5s ease-in-out;
 }
 
 #main_caption {
   color: white;
-  font-size: 100px;
+  font-size: 81px;
   line-height: 1.55;
   font-weight: 100;
   display: flex;
@@ -97,8 +134,8 @@ header nav {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 300px;
-  right: 400px;
+  top: 230px;
+  left: calc(50% - 600px + 565px);
 }
 
 #main_caption>div {
@@ -110,12 +147,12 @@ header nav {
 }
 
 #second_caption {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 100;
 }
 
 #date_caption {
-  margin-top: 110px;
+  margin-top: 60px;
   font-size: 18px;
   font-weight: 300;
 }
@@ -134,7 +171,7 @@ header nav {
   align-items: center;
   cursor: pointer;
   margin: 100px auto 0 auto;
-  padding: 0px 140px;
+  padding: 0 140px;
 }
 
 .buy_button:hover {
@@ -146,23 +183,25 @@ header nav {
 
 
 #level {
-  width: 100%;
-  height: 450px;
+  height: -webkit-fill-available;
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 100px 15% 60px;
   justify-content: space-around;
+  transition: all .5s ease-in-out;
 }
 
 .feature {
   display: flex;
   flex-direction: column;
   width: 180px;
+  padding: 0 10px;
 }
 
 .feature img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   margin: auto;
 }
 
@@ -189,40 +228,25 @@ header nav {
 
 
 #about-intensiv {
-  padding: 0 60px;
+  padding: 0 50px;
 }
 
-.about-intensiv__wrap{
+.about-intensiv__wrap {
   display: flex;
   flex-direction: row;
 }
 
-.about-intensiv__wrap img{
-padding: 0 30px 50px 0;
-max-width: 550px;
-min-width: 100px;
+.about-intensiv__wrap img {
+  padding: 0 30px 50px 0;
+  max-width: 550px;
+  min-width: 100px;
+  height: 100%;
 }
 
 
-h1 {
-  margin: 0;
-  font-size: 42px;
-  line-height: 1.55;
-  font-weight: 100;
-  text-transform: uppercase;
-  padding-bottom: 50px;
-}
-
-h2{
-  font-weight: 700;
-  font-size: 18px;
-}
-
-h3{
-  font-weight: 100;
-}
 
 #subscription {
+  width: 450px;
   font-size: 18px;
   line-height: 1.55;
   font-weight: 300;
@@ -240,13 +264,6 @@ h3{
 
 #video-review {
   text-align: center;
-}
-
-#video-review iframe {
-  padding-bottom: 80px;
-  max-width: 500px;
-  min-width: 300px;
-  width: 100%;
 }
 
 #result {
@@ -275,6 +292,11 @@ h3{
 
 #treners {
   text-align: center;
+  padding: 0 50px;
+}
+
+#treners h1{
+  text-align: center;
 }
 
 #treners-wrap {
@@ -289,7 +311,7 @@ h3{
   top: 200px;
 }
 
-.treners-info img{
+.treners-info img {
   min-width: 50px;
   max-width: 500px;
   width: 100%;
@@ -298,12 +320,12 @@ h3{
 
 
 #program {
-  padding: 0 60px;
+  padding: 0 40px;
 }
 
 .program-part h1 {
   font-size: 30px;
-  padding: 50px 0 15px 0;
+  padding: 40px 0 15px 0;
 }
 
 .program-info,
@@ -311,14 +333,14 @@ h3{
   font-size: 18px;
   line-height: 1.55;
   font-weight: 300;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   border-bottom: 1px solid white;
 }
 
 
 
 #reviews {
-  padding: 250px 0 50px 0;
+  padding: 200px 0 50px 0;
 }
 
 #reviews h1 {
@@ -365,7 +387,7 @@ h3{
 
 
 #instruction {
-  padding: 60px 60px 120px 60px;
+  padding: 60px 40px 120px 40px;
 }
 
 #instruction h1 {
@@ -415,7 +437,7 @@ h3{
 
 #price {
   text-align: center;
-  padding-bottom: 200px;
+  padding:0 0 200px 0;
 }
 
 #price h1 {
@@ -480,7 +502,7 @@ h3{
 
 
 #faq {
-  padding: 0 60px 120px;
+  padding: 0 40px 120px;
 }
 
 .faq-section {
@@ -531,7 +553,7 @@ h3{
 }
 
 .faq_answer {
-  padding-bottom: 15px;
+  padding-bottom: 20px;
   display: none;
   transform-origin: top center;
 }
@@ -539,16 +561,14 @@ h3{
 
 
 #final {
-  width: 100%;
   border-bottom: 1px solid white;
 }
 
 #final-wrap {
   background-image: url(/image/footer.webp);
   background-size: 100%, 350px, contain;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
-  width: calc(100% - 120px);
   height: 350px;
   margin: auto;
   display: flex;
@@ -563,7 +583,7 @@ h3{
 
 
 footer {
-  padding: 60px;
+  padding: 10%;
 }
 
 #first-wrap {
@@ -584,7 +604,7 @@ footer {
 }
 
 #first-wrap li:last-child {
-padding-right: 0;
+  padding-right: 0;
 }
 
 
@@ -609,3 +629,536 @@ padding-right: 0;
 }
 
 
+
+
+@media screen and (min-width: 1199px) {
+
+
+  #main_caption {
+    color: white;
+    font-size: 81px;
+    line-height: 1.55;
+    font-weight: 100;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 237px;
+    left: calc(50% - 600px + 565px);
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 1199px) {
+
+
+  header {
+    height: 800px;
+  }
+
+  #header_background {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 480px + -100px);
+    width: 570px;
+    height: 790px;
+    transition: all .5s ease-in-out;
+  }
+
+  #main_caption {
+    color: white;
+    font-size: 90px;
+    line-height: 1.55;
+    font-weight: 100;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 230px;
+    left: 0;
+    right: 0;
+  }
+
+  .part{
+    font-size: 16px;
+  }
+
+  .program-part h1{
+    font-size: 24px;
+  }
+
+  .program-info,
+.instruction-info {
+  font-size: 16px;
+}
+
+.instruction-wrap__main h1{
+  font-size: 20px;
+}
+
+#treners h1{
+  text-align: center;
+}
+
+#treners h2, #treners h3{
+  font-size: 16px;
+}
+
+#final{
+  padding: 0 50px;
+}
+}
+
+
+
+@media screen and (max-width: 959px) {
+
+  header {
+    height: 580px;
+  }
+
+  #header_background {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 320px + -90px);
+    width: 410px;
+    height: 580px;
+    transition: all .5s ease-in-out;
+  }
+
+  #main_caption {
+    color: white;
+    font-size: 75px;
+    line-height: 1.55;
+    font-weight: 100;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 230px;
+    left: 0;
+    right: 0;
+  }
+
+  #date_caption {
+    font-size: 16px;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  header nav img{
+    display: block;
+    cursor: pointer;
+  }
+
+  header nav {
+    padding: 60px 12% 0 12%;
+    width: -webkit-fill-available;
+}
+
+  .about-intensiv__wrap{
+    flex-direction: column;
+    transition: all .5s ease-in-out;
+  }
+
+  #about-intensiv{
+    padding: 0 150px;
+  }
+
+  #subscription{
+    border: none;
+    width: 100%;
+  }
+
+  .about-intensiv__wrap img {
+    padding: 0 0 50px 0;
+    max-width: 900px;
+    min-width: 100px;
+    height: 100%;
+  }
+
+  .part{
+    padding-left: 0;
+  }
+
+  #level {
+    justify-content: space-between;
+    padding: 100px 15% 60px;
+  }
+
+  .feature img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature {
+    width: 140px;
+}
+
+  #part-wrap{
+    flex-direction: column;
+  }
+
+  .part-result{
+    padding-bottom: 30px;
+    font-size: 16px;
+  }
+
+  #result{
+    padding: 0 10%;
+  }
+
+  #treners{
+    padding: 0 18%;
+  }
+
+  #treners h1{
+    text-align: left;
+  }
+
+  #treners-wrap :nth-child(2)>* {
+    position: relative;
+    top: 300px;
+}
+
+  #program{
+  padding: 0 18%;
+  margin-bottom: -90px;
+}
+
+.review-text{
+  font-size: 16px;
+}
+
+.instruction-wrap__main{
+  flex-direction: column-reverse;
+}
+
+#instruction{
+  padding: 60px 18% 120px 18%;
+}
+
+#instruction-photo {
+  padding: 0 0 20px 0;
+}
+
+#price img {
+  padding: 100px 0 50px 0;
+}
+
+#email-notification {
+  font-size: 14px;
+}
+
+#faq{
+  padding: 0 18% 100px;
+}
+
+.faq-question__wrap h1{
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.buy_button {
+  padding: 0.5% 15%;
+}
+
+#final{
+  padding: 0 18%;
+}
+
+#final-wrap{
+  padding: 50px;
+  height: auto;
+}
+}
+
+
+
+
+@media screen and (max-width: 959px) and (min-width: 639px) {
+  #main_caption {
+    color: white;
+    font-size: 75px;
+    line-height: 1.55;
+    font-weight: 100;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 180px;
+    left: calc(50% - 600px + 500px);
+  }
+
+  #main_caption>div {
+    margin-bottom: 0px;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 639px) {
+
+  header {
+    height: 780px;
+  }
+
+  #header_background {
+    position: initial;
+    width: 100%;
+    height: 780px;
+    transition: all .5s ease-in-out;
+  }
+
+  #main_caption {
+    color: white;
+    font-size: 75px;
+    line-height: 1.55;
+    font-weight: 100;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  #main_caption>div {
+    margin-bottom: 0px;
+  }
+
+  #second_caption {
+    font-size: 34px;
+    width: 400px;
+  }
+
+  header nav {
+    position: absolute;
+    padding: 40px 12% 40px 12%;
+}
+  #level {
+    width: 100%;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 100px 0 60px 0;
+    transition: all .5s ease-in-out;
+  }
+  
+  .feature {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  #first-wrap{
+    flex-direction: column;
+  }
+
+  #first-wrap ul {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #first-wrap li{
+    padding: 10px 0;
+  }
+
+  #second-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-social{
+  padding-bottom: 20px;
+}
+
+#second-wrap ul {
+  align-items: flex-start;
+}
+
+#first-wrap .logo{
+  padding-bottom: 20px;
+}
+
+.buy_button {
+  color: white;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  height: 60px;
+  width: fit-content;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 100px auto 0 auto;
+  padding: 20px 140px;
+}
+
+#about-intensiv {
+  padding: 0 10%;
+}
+
+#video-review{
+  padding: 0 10%;
+}
+
+#treners {
+  padding: 0 10% 80px 10%;
+  height: auto;
+}
+
+#treners h1 {
+  text-align: center;
+}
+
+#treners-wrap{
+  flex-direction: column;
+  height: auto;
+  gap: 50px;
+}
+
+#treners-wrap :nth-child(1){
+  order: 1;
+  position: initial;
+  top: 0;
+}
+
+#treners-wrap :nth-child(2){
+  order: 0;
+  position: initial;
+  top: 0;
+}
+
+#treners-wrap :nth-child(3) {
+  order: 2;
+  position: initial;
+  top: 0;
+}
+
+h1{
+  font-size: 36px;
+}
+
+.program-part h1 {
+  font-size: 22px;
+}
+
+#program{
+  padding: 0 10%;
+}
+
+.review{
+  flex-direction: column;
+}
+
+.review-info_wrap{
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
+
+.review-text {
+  max-width: 500px;
+  min-width: 100px;
+}
+
+#instruction {
+  padding: 60px 10% 120px 10%;
+}
+
+#price{
+  padding: 0 10% 200px 10%;
+}
+
+#registration_button_wrap{
+  width: auto;
+}
+
+#faq {
+  padding: 0 10% 100px;
+}
+
+.buy_button {
+  padding: 0.5% 15%;
+}
+
+#final{
+  padding: 0 10%;
+}
+
+}
+
+@media screen and (min-width: 479px) {
+  iframe{
+    padding: 50px 0;
+  }
+}
+
+
+@media screen and (max-width: 479px) {
+
+  header{
+    height: 600px;
+  }
+
+  #header_background {
+    position: initial;
+    width: 100%;
+    height: 605px;
+    transition: all .5s ease-in-out;
+  }
+
+  #main_caption{
+    top: 230px;
+  }
+
+  #intensiv_caption {
+    font-size: 46px;
+  }
+
+  #main_caption>div {
+    margin-bottom: 0px;
+  }
+
+  #second_caption {
+    font-size: 20px;
+    width: 60%;
+  }
+
+  #date_caption {
+    margin-bottom: 20px;
+  }
+
+  section h1, #treners h1 {
+    text-align: left;
+  }
+
+  #price h1{
+    text-align: center;
+}
+
+.registration_button{
+  padding: 0;
+}
+
+}
