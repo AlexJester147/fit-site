@@ -630,7 +630,7 @@ header nav {
 #final-wrap {
   background-image: url(/image/footer.webp);
   background-size: 100%, 350px, contain;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   height: 350px;
   margin: auto;
