@@ -6,7 +6,6 @@ body {
   font-family: 'FuturaLightC', Arial, sans-serif;
   color: white;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  overflow-x: hidden;
 }
 
 @font-face {
@@ -98,6 +97,7 @@ nav ul li {
 }
 
 .menu.active{
+  overflow: hidden;
   display: flex;
   top:0;
   right: 0;
