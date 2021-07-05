@@ -5,8 +5,6 @@ setTimeout(()=>{
   const opacityMenu = document.querySelector('.menu-opacity');
   const ancors = document.querySelectorAll('.menu a');
 
-  console.log(ancors);
-
 burger.onclick = function(){
   menu.classList.toggle('active');
   opacityMenu.style.display = 'flex';
