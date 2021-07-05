@@ -27,12 +27,12 @@
         <div class="close-cross">&#10006;</div>
         </div> 
         
-      <li><a href="#">о марафоне</a></li>
-      <li><a href="#">тренеры</a></li>
-      <li><a href="#">что входит</a></li>
-      <li><a href="#">отзывы</a></li>
-      <li><a href="#">купить</a></li>
-      <li><a href="#">faq</a></li>
+      <li><a href="#about-intensiv">о марафоне</a></li>
+      <li><a href="#treners">тренеры</a></li>
+      <li><a href="#program">что входит</a></li>
+      <li><a href="#reviews">отзывы</a></li>
+      <li><a href="#price">купить</a></li>
+      <li><a href="#faq">faq</a></li>
     </ul>
 
     <img src="/image/insta.png"> 
@@ -43,9 +43,9 @@
     <nav>
       <div class="logo"><a href="#">kolsanova.fit</a></div>
       <ul>
-        <li><a href="#">что входит</a></li>
-        <li><a href="#">отзывы</a></li>
-        <li><a href="#">оплатить</a></li>
+        <li><a href="#program">что входит</a></li>
+        <li><a href="#reviews">отзывы</a></li>
+        <li><a href="#price">оплатить</a></li>
       </ul>
       <img class="burger" src="/image/hamburger.png">
     </nav>
@@ -528,7 +528,16 @@
         $(this).siblings().slideToggle(500);
         $(this).children(1).toggleClass('active');
       });
+
+      $(".menu, nav").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
     });
+    });
+
+
   </script>
 </body>
 
