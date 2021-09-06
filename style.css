@@ -177,7 +177,7 @@ header nav {
 }
 
 #header_background {
-  background-image: url(/image/photo1.jpg);
+  background-image: url(.//image/photo1.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -630,7 +630,7 @@ header nav {
 }
 
 #final-wrap {
-  background-image: url(/image/footer.webp);
+  background-image: url(.//image/footer.webp);
   background-size: 100%, 350px, contain;
   background-position: center;
   background-repeat: no-repeat;
